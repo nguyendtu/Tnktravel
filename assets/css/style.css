@@ -1,3 +1,8 @@
+html, body {
+  font-family: "Lato-Regular";
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
 body{
 	background: rgb(248, 248, 248);
 }
@@ -275,7 +280,7 @@ ul#nav_search .active a{
 	margin-left: -15px;
 }
 .country .list-tour li:before{
-	background: url("assets/images/li.png") no-repeat;
+	background: url("../../assets/images/li.png") no-repeat;
 	content: "";
 	display: inline-block;
 	width: 10px;
@@ -349,8 +354,17 @@ ul#nav_search .active a{
 		text-align: center;
 	}
 	.navbar-nav li{
-		width: 20%;
+		width: auto;
 		text-align: center;
+	}
+	.navbar-brand{
+		height: 100px;
+	}
+	.navbar-brand img{
+		width: 15%;
+		position: absolute;
+		top: 10px;
+		left: 45%;
 	}
 }
 @media screen and (min-width: 1199px){
@@ -358,6 +372,7 @@ ul#nav_search .active a{
 		width: auto;
 	}
 	.navbar-brand{
+		height: 50px;
 		width: auto;
 		text-align: left;
 	}
@@ -365,5 +380,10 @@ ul#nav_search .active a{
 		width: auto;
 		text-align: left;
 		margin-left: -5px;
+	}
+	.navbar-brand img{
+		width: 75%;
+		position: relative;
+		top: -18px;
 	}
 }
