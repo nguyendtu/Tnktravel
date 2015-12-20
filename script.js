@@ -1,46 +1,40 @@
-var search = document.getElementById("nav_search");
-search.onclick = function(e){
-	var curActive = search.getElementsByClassName("active")[0];
-
-	if(e.target != curActive){
-		curActive.setAttribute("class", "");
-		e.target.parentElement.setAttribute("class", "active");
-		if(e.target.getAttribute("href") == "#tour"){
-			document.getElementById("tour").style.display = "block";
-			document.getElementById("hotel").style.display = "none";
-		}else{
-			document.getElementById("tour").style.display = "none";
-			document.getElementById("hotel").style.display = "block";
-		}
+$("#nav_search").click(function(e){
+	$("#nav_search .active").removeClass("active");
+	e.target.parentElement.setAttribute("class", "active");
+	if(e.target.parentElement.dataset.target == "hotel"){
+		$("#hotel").css("display", "block");
+		$("#tour").css("display", "none");
+	}else{
+		$("#hotel").css("display", "none");
+		$("#tour").css("display", "block");
 	}
-}
-/*
-var thums = document.getElementsByClassName("thumbnail");
-for(var i = 0; i < thums.length; i++){
-	var thum = thums[i];
-	
-	thum.onmouseover = function(e){
-		var cur = e.target;
-		if(cur == hover){
-			
-			hover.setAttribute("class", "hover");
-		}
-	}
-	thum.onmouseout = function(e){
-		var cur = e.target;
-		if(cur == hover){
-			defaults.style.opacity = '0';
-			defaults.style.top = "100px";
-			hover.setAttribute("class", "");
-		}
-	}
-}*/
+});
 
-function mouseOver(e){
-	var defaults = e.parentElement;
-	defaults = defaults.nextSibling.nextSibling;
-	defaults.style.opacity = '1';
-	defaults.style.top = "0px";
-	e.setAttribute("class", "hover");
-}
+$("#menu").click(function(e){
+	$("#menu .active").removeClass("active");
+	e.target.parentElement.setAttribute("class", "active");
 
+})
+
+
+var info = null;
+var doc = null;
+$(".thumbnail .hover-tour").mouseover(function(){
+	doc = $(this).find("img").parent().next();
+	info = doc.next();
+	var styles = {
+		opacity: "1",
+		top: "90px",
+	};
+	$(this).css("opacity", "0.4");
+	doc.css("opacity", "1");
+	info.css(styles);
+}).mouseout(function(){
+	var styles = {
+		opacity: "0",
+		top: "150px",
+	};
+	$(this).css("opacity", "1");
+	doc.css("opacity", "0");
+	info.css(styles);
+});
