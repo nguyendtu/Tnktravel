@@ -28,6 +28,11 @@ ul{
 .navbar-nav li:last-child{
 	border-right: none;
 }
+.navbar-brand > img{
+    position: relative;
+    top: -16px;
+    width: 75%;
+}
 #wrapper{
 	position: relative;
 	margin-bottom: 10px;
