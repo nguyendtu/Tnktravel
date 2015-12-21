@@ -139,16 +139,15 @@ ul#nav_search .active a{
 .main-content{
 	margin-top: -15px;
 }
-.tour-featured,
-.tour-interested{
+.thumb{
 	background-color: #fcfcfc;
 	margin-bottom: 30px;
 	padding: 0px 10px;
 }
-.caption-tour{
+.thumb-caption{
 	font-weight: bold;
 }
-.caption-tour:after{
+.thumb-caption:after{
 	content: "";
 	display: block;
 	padding: 10px;
@@ -326,19 +325,129 @@ ul#nav_search .active a{
 #menu-bottom li:last-child a{
 	border-right: none;
 }
+.modal-title,
+.note{
+	display: inline-block;
+}
+.order{
+	text-align: center;
+	padding: 20px 0;
+}
+.note{
+	width: 52%;
+	text-align: right;
+}
+.form-footer{
+	text-align: center;
+}
+.header{
+	padding: 10px;
+	background: rgb(250, 250, 250);
+	border: 1px solid rgb(242, 242, 242);
+	margin-bottom: 30px;
+}
+#hotel_slider{
+	height: 350px;
+}
+.right{
+	text-align: right;
+}
+.sort{
+	margin: 10px 0;
+	background: rgb(242, 242, 242);
+	padding: 5px 10px;
+}
+.form-inline .form-group{
+	margin: 0 15px;
+}
+.caption{
+	padding-bottom: 0;
+	min-height: 207px;
+}
+.bottom-bar{
+	margin: -15px -4px -4px -4px;
+	background: rgb(0, 70, 0);
+	max-height: 66px;
+	overflow: hidden;
+}
+.bottom-bar .details{
+	margin-bottom: 0;
+	padding: 5px;
+	margin-top: 10%;
+}
+.bottom-bar a,
+.bottom-bar span{
+	color: #fff;
+}
+.hotel-price{
+	background: #ff7676;
+	padding: 8px;
+	text-align: center;
+	color: #fff;
+}
+.star-yellow span{
+	color: rgb(0, 70, 0);
+}
+.hotel-star{
+	padding: 0;
+	margin: 0;
+}
+.hotel-star li{
+	display: inline-block;
+}
+.price-size{
+	font-size: 18px;
+}
+.hotel{
+	border: 1px solid rgb(222, 222, 222);
+	background: #fff;
+	padding: 0px 10px;
+}
+.hotel span,
+.hotel p{
+	display: inline;
+}
+.hotel li{
+	display: block;
+}
+.hotel-info{
+	margin-top: 30px;
+}
+.hotel-info h4{
+	color: rgb(0, 70, 0);
+}
+.hotel-info ul{
+	margin-left: 50px;
+	list-style-type: circle;
+}
+.related-hotel .col-md-5{
+	width: 150px;
+	height: 120px;
+	border: 1px solid rgb(242, 242, 242);
+	padding: 4px;
+}
 
 @media screen and (max-width: 767px){
 	.countries-tour .country{
 		width: 100%;
 		margin-bottom: 10px;
 	}
-	/* .navbar-header{
+	.bottom-bar .col-md-6{
 		width: 100%;
 	}
-	.navbar-brand{
-		width: 100%;
+	.bottom-bar .details{
+		margin: 0;
+		padding: 0;
+	}
+	.bottom-bar{
+		height: auto;
 		text-align: center;
-	} */
+		overflow: visible;
+	}
+	.bottom-bar .hotel-price{
+		margin-bottom: 10px;
+		padding: 0;
+	}
 }
 
 @media screen and (min-width: 768px){
@@ -366,6 +475,22 @@ ul#nav_search .active a{
 		top: 10px;
 		left: 45%;
 	}
+	.bottom-bar .col-md-6{
+		width: 100%;
+	}
+	.bottom-bar .details{
+		margin: 0;
+		padding: 0;
+	}
+	.bottom-bar{
+		height: auto;
+		text-align: center;
+		overflow: visible;
+	}
+	.bottom-bar .hotel-price{
+		margin-bottom: 10px;
+		padding: 0;
+	}
 }
 @media screen and (min-width: 1199px){
 	.navbar-header{
@@ -385,5 +510,19 @@ ul#nav_search .active a{
 		width: 75%;
 		position: relative;
 		top: -18px;
+	}
+	.bottom-bar .col-md-6{
+		width: 50%;
+	}
+	.bottom-bar .details{
+		margin-top: 15%;
+		padding: 0;
+	}
+	.bottom-bar{
+		text-align: left;
+		overflow: hidden;
+	}
+	.bottom-bar .hotel-price{
+		padding: 8px;
 	}
 }
