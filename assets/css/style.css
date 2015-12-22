@@ -150,7 +150,7 @@ ul#nav_search .active a{
 .thumb-caption:after{
 	content: "";
 	display: block;
-	padding: 10px;
+	padding: 5px;
 	margin-left: -10px;
 	margin-right: -10px;
 	border-bottom: 1px solid green;
@@ -205,13 +205,14 @@ ul#nav_search .active a{
 .price{
 	font-weight: bold;
 	font-size: 30px;
-	color: rgb(0, 78, 0);
+	color: red;
+	opacity: initial;
 }
 .price-top{
 	position: absolute;
 	top: 0;
 	left: 15px;
-	opacity: 0.4;
+	opacity: 0.6;
 }
 .price-width{
 	width: 110px;
@@ -249,10 +250,10 @@ ul#nav_search .active a{
 .footer-tour a{
 	color: #fff;
 }
-.tour-interested .tour-info{
+.text-right{
 	text-align: right;
 }
-.tour-interested .tour-info li{
+.inline li{
 	display: inline-block;
 	margin-left: 10px;
 }
@@ -346,7 +347,8 @@ ul#nav_search .active a{
 	border: 1px solid rgb(242, 242, 242);
 	margin-bottom: 30px;
 }
-#hotel_slider{
+#hotel_slider,
+#tour_slider{
 	height: 350px;
 }
 .right{
@@ -398,25 +400,29 @@ ul#nav_search .active a{
 .price-size{
 	font-size: 18px;
 }
-.hotel{
+.info-detail{
 	border: 1px solid rgb(222, 222, 222);
 	background: #fff;
-	padding: 0px 10px;
+	padding: 7px 10px;
+	min-height: 0px;
 }
-.hotel span,
-.hotel p{
+.info-detail span,
+.info-detail p{
 	display: inline;
 }
 .hotel li{
 	display: block;
 }
-.hotel-info{
+.hotel-info,
+.tour-info{
 	margin-top: 30px;
 }
-.hotel-info h4{
+.hotel-info h4,
+.tour-info h4{
 	color: rgb(0, 70, 0);
 }
-.hotel-info ul{
+.hotel-info ul,
+.tour-info ul{
 	margin-left: 50px;
 	list-style-type: circle;
 }
@@ -425,6 +431,16 @@ ul#nav_search .active a{
 	height: 120px;
 	border: 1px solid rgb(242, 242, 242);
 	padding: 4px;
+}
+.related-tour{
+	padding-bottom: 10px;
+}
+.related-tour ul{
+	list-style-type: circle;
+	margin-left: 20px;
+}
+#order_form h4{
+	text-decoration: underline;
 }
 
 @media screen and (max-width: 767px){
@@ -515,8 +531,8 @@ ul#nav_search .active a{
 		width: 50%;
 	}
 	.bottom-bar .details{
-		margin-top: 15%;
-		padding: 0;
+		margin-top: 10%;
+		padding-left: 10px;
 	}
 	.bottom-bar{
 		text-align: left;
